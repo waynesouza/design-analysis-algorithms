@@ -1,0 +1,19 @@
+O problema exemplo em questão será o problema 1351 (Supermercado) da plataforma Beecrowd. Segue o enunciado do mesmo:
+
+"Sr. Jones é um marido exemplar. Todo sábado de manhã a Sra. Jones lhe dá uma lista de itens a serem comprados no supermercado e ele compra exatamente o que lhe foi pedido, sempre escolhendo as marcas com os menores preços. Mas Sr. Jones odeia ir ao mercado nos sábados, visto que seus corredores estão lotados de carregadores. Ele deseja mudar o jeito com que ele faz compras. Ao invés de ir para lá e para cá para comprar os produtos na lista de sua esposa, ele vai tentar comprar os itens passando apenas uma vez por cada corredor, pegando os produtos na ordem exata dada na lista. Então ele pediu a você para escrever um programa que o ajude com seu novo estilo de fazer compras.
+
+Dada as informações sobre os produtos disponíveis no supermercado junto com seus preços na ordem em que aparecem na lista de Sr. Jones e a lista de produtos dada pela sua mulher, seu programa deve determinar o menor preço que ele pagaria.
+
+Sr. Jones compra os produtos na ordem em que eles aparecem em sua lista e ele nunca volta atrás enquanto anda pelos corredores. Portanto, se ele compra o-ésimo produto no seu caminho para o-ésimo item da lista, o próximo produto a ser comprado é o -ésimo item da lista – e deve ser comprado dos produtos que vem depois de i em seu caminho. A figura abaixo mostra um exemplo onde produtos são identificados por inteiros. Note que diferentes marcas do mesmo produto poder aparecer separadamente. No exemplo Sr. Jones deve comprar os produtos 1, 1, 2, 20 (note que o produto 1 aparece duas vezes na lista). Para o exemplo, o custo mínimo que Sr. Jones pode conseguir, seguindo suas limitações, é 21.30. Note também que com esse novo estilo de fazer comprar pode ser impossível para Sr. Jones comprar todos os itens da sua lista; neste caso, seu programa deve alertar Sr. Jones.
+
+Entrada
+Seu programa deverá processar dados para diversos casos de teste (sessões de compra). A primeira linha na descrição de uma sessão de compra contém dois inteiros e ; indica o número de itens na lista da Sra. Jones (1 ≤ ≤ 100) e representa o número total de produtos disponíveis no supermercado (1 ≤ ≤ 100,000). A próxima linha contém inteiros , representando a lista de produtos da lista da Sra. Jones (≤ 100000, 1 ≤ i ≤ ). Seguem linhas, representando os produtos do supermercado na ordem em que eles aparecem no caminho do Sr. Jones. Cada uma destas linhas contém um inteiro e um número real , que representam, respectivamente, um identificador de produto e seu preço (1 ≤ ≤ 100,000). O fim da entrada é indicado por = = 0.
+
+Saída
+Para cada sessão de compra da entrada, seu programa deve produzir uma linha de saída,  contendo o menor custo que Sr. Jones pode conseguir. Se não é possível comprar todos os itens da sessão, imprima “Impossible”. O custo deve ser impresso como um número real com precisão de duas casas decimais, e o último dígito decimal deve ser arredondado. A entrada não vai conter casos de teste onde diferenças de arredondamento são significantes."
+
+PS: confirma o enunciado na plataforma Beecrowd, porque lá fica ele mais claro com os exemplos de entrada e saída.
+
+O objetivo do TP é explorar o paradigma de programação servindo como objeto de estudo. Os produtos do TP que devem ser apresentados incluem:
+1 - o código fonte em python que resolve o problema.
+2 - um arquivo PDF que explica todos os detalhes da solução proposta e inclui um guia de estudos explicando: (1) o paradigma, (2) o problema, isto é, a modelagem proposta na solução, (3) a análise do custo do algoritmo.

@@ -1,0 +1,5 @@
+O problema exemplo em questão será o problema 2769 (Linha de montagem) da plataforma Beecrowd. Esse é um problema clássico na computação e os detalhes sobre os formatos da entrada e saída devem ser colhidos no enunciado do problema que consta na plataforma Beecrowd.
+
+O objetivo do TP é explorar o paradigma de programação servindo como objeto de estudo. Os produtos do TP que devem ser apresentados incluem:
+1 - o código fonte em python que resolve o problema.
+2 - um arquivo PDF que explica todos os detalhes da solução proposta e inclui um guia de estudos explicando: (1) o paradigma, (2) o problema, isto é, a modelagem proposta na solução, (3) a análise do custo do algoritmo.
