@@ -1,0 +1,7 @@
+Especificações:Cada posição do arranjo armazena uma raposa ou uma galinha, representadas por 'R' ou 'G' respectivamente.Cada raposa pode capturar uma única galinha.Uma raposa não pode capturar uma galinha que está numa posição cujo índice no arranjo está distante mais que K unidades.Implemente um algoritmo polinomial encontrar o número máximo de galinhas que podem ser capturadas
+Entrada: um arranjo A de tamanho N que armazena em cada posição um caractere
+Saída: um arranjo de pares (i-raposa, j-galinha), onde i-raposa e j-galinha são índices do arranjo de entrada, indicando qual raposa capturou qual galinha. Imprima também o tamanho do arranjo de saída
+
+O objetivo do TP é explorar o paradigma de programação servindo como objeto de estudo. Os produtos do TP que devem ser apresentados incluem:
+1 - o código fonte em python que resolve o problema.
+2 - um arquivo PDF que explica todos os detalhes da solução proposta e inclui um guia de estudos explicando: (1) o paradigma, (2) o problema, isto é, a modelagem proposta na solução, (3) a análise do custo do algoritmo.
