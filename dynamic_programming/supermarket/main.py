@@ -1,7 +1,7 @@
 import sys
 
 
-def solve_shopping_session(M, N, jones_list):
+def solve_problem(M, N, jones_list):
     # Inicializar a tabela de custos mínimos
     # O valor inicial será infinito (representado por sys.float_info.max)
     dp = [[sys.float_info.max] * (N + 1) for _ in range(M + 1)]
@@ -43,7 +43,7 @@ def main():
 
         jones_list = list(map(int, input().split()))
 
-        result = solve_shopping_session(M, N, jones_list)
+        result = solve_problem(M, N, jones_list)
         print(result)
 
 
