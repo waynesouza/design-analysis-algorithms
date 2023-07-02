@@ -1,39 +1,37 @@
-def capturar_galinhas(arranjo, k):
-    raposas = []
-    galinhas = []
-    n = len(arranjo)
+def solve_problem(input_list, k):
+    foxes = []
+    chickens = []
+    n = len(input_list)
 
     for i in range(n):
-        if arranjo[i] == 'R':
-            raposas.append(i)
+        if input_list[i] == 'R':
+            foxes.append(i)
         else:
-            galinhas.append(i)
+            chickens.append(i)
 
-    pares = []
+    pairs = []
     i = 0
     j = 0
 
-    while i < len(raposas) and j < len(galinhas):
-        if abs(raposas[i] - galinhas[j]) <= k:
-            pares.append((raposas[i] + 1, galinhas[j] + 1))
+    while i < len(foxes) and j < len(chickens):
+        if abs(foxes[i] - chickens[j]) <= k:
+            pairs.append((foxes[i] + 1, chickens[j] + 1))
             i += 1
             j += 1
-        elif raposas[i] < galinhas[j]:
+        elif foxes[i] < chickens[j]:
             i += 1
         else:
             j += 1
 
-    return pares
+    return pairs
 
 
-# Exemplo de uso
-arranjo_1 = ['R', 'G', 'G', 'G', 'R']
-k1 = 1
-pares_1 = capturar_galinhas(arranjo_1, k1)
-print(f'B[] = {pares_1}\nSize = {len(pares_1)}\n')
+first_list = ['R', 'G', 'G', 'G', 'R']
+first_k = 1
+first_pairs = solve_problem(first_list, first_k)
+print(f'B[] = {first_pairs}\nSize = {len(first_pairs)}\n')
 
-arranjo_2 = ['G', 'G', 'R', 'R', 'G', 'R']
-k2 = 2
-pares_2 = capturar_galinhas(arranjo_2, k2)
-
-print(f'B[] = {pares_2}\nSize = {len(pares_2)}')
+second_list = ['G', 'G', 'R', 'R', 'G', 'R']
+second_k = 2
+second_pairs = solve_problem(second_list, second_k)
+print(f'B[] = {second_pairs}\nSize = {len(second_pairs)}')
