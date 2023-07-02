@@ -1,20 +1,39 @@
-def to_capture_chickens(A, k):
-    captures = []  # Lista de capturas
+def capturar_galinhas(arranjo, k):
+    raposas = []
+    galinhas = []
+    n = len(arranjo)
 
-    for i in range(len(A)):
-        if A[i] == 'R':
-            j = i - k  # Inicializa o índice da galinha no limite inferior do intervalo permitido
+    for i in range(n):
+        if arranjo[i] == 'R':
+            raposas.append(i)
+        else:
+            galinhas.append(i)
 
-            while j <= i + k:
-                if 0 <= j < len(A) and A[j] == 'G':
-                    captures.append((i + 1, j + 1))  # Adiciona o par (i, j) à lista de capturas
-                    break
-                j += 1
+    pares = []
+    i = 0
+    j = 0
 
-    return captures, len(captures)
+    while i < len(raposas) and j < len(galinhas):
+        if abs(raposas[i] - galinhas[j]) <= k:
+            pares.append((raposas[i] + 1, galinhas[j] + 1))
+            i += 1
+            j += 1
+        elif raposas[i] < galinhas[j]:
+            i += 1
+        else:
+            j += 1
+
+    return pares
 
 
-A = ['G', 'G', 'R', 'R', 'G', 'R']
-k = 2
-B, size = to_capture_chickens(A, k)
-print(f'A[] = {A}\nB[] = {B}\nSize = {size}')
+# Exemplo de uso
+arranjo_1 = ['R', 'G', 'G', 'G', 'R']
+k1 = 1
+pares_1 = capturar_galinhas(arranjo_1, k1)
+print(f'B[] = {pares_1}\nSize = {len(pares_1)}\n')
+
+arranjo_2 = ['G', 'G', 'R', 'R', 'G', 'R']
+k2 = 2
+pares_2 = capturar_galinhas(arranjo_2, k2)
+
+print(f'B[] = {pares_2}\nSize = {len(pares_2)}')
